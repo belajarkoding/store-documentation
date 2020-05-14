@@ -4,16 +4,22 @@ Selamat datang di dokumentasi BWAStore. Terima kasih telah membeli kelas BWAStor
 
 Pastikan kalian membeli kelas ini langsung dari creatornya ya 😉. Kami sangat sedih jika kalian membeli dari pihak yang tidak bertanggung jawab. Jika kalian mendapatkannya selain dari BelajarKoding dan BuildWith Angga, kalian bisa lapor langsung ke kami ya!
 
-Sebelum memulai belajar, ada beberpa informasi yang akan kami akan update secara berkala di halaman ini, dan kalian bisa cek berkala. Di halaman ini pula kami akan mendokumentasikan tutorial yang memang membutuhkan catatan seperti pemasangan tools dan deployment server
+Sebelum memulai belajar, ada beberapa informasi yang akan kami akan update secara berkala di halaman ini, dan kalian bisa cek berkala. Di halaman ini pula kami akan mendokumentasikan tutorial yang memang membutuhkan catatan seperti pemasangan tools dan deployment server
 
 People with the spirit of learning, lets start! 😉
 
 <hr>
 
 # Visual Studio Code
-Sebelum kalian memulai membuat aplikasi, saya rekomendasikan untuk memasang semua plugin dibawah ini. 
+Sebelum kalian memulai membuat aplikasi, salah satu yang harus kalian siapkan adalah Code Editor. Disini saya merekomendasikan **Visual Studio Code** sebagai code editor. Selain gratis, kalian bisa memasang ekstensi yang membuat code editor kalian semakin powerful
+
+Berkas instalasi bisa kalian unduh di https://code.visualstudio.com. Untuk cara install dapat langsung mengikuti aplikasi yang disediakan sesuai dengan sistem operasi yang digunakan
+
+![VSCode](/images/vscode.png)
 
 ## Ekstensi
+Untuk membuat pengalaman coding kalian lebih baik,saya rekomendasikan untuk memasang semua plugin dibawah ini. 
+
 ### Ekstensi PHP & Laravel
 1. Laravel Blade Snippets
 2. Laravel Blade Spacer
@@ -119,3 +125,40 @@ Adminer adalah tools untuk mengatur database MySQL di server kita. Saya merekome
 Untuk adminer, saya merekomendasikan untuk menggunakan versi dari @pematon di GitHub, yang bisa kalian akses di https://github.com/pematon/adminer-custom
 
 Proses instalasinya, cukup kalian download zip / clone dan kalian taruh di folder www (jika menggunakan Laragon)
+
+
+
+<hr>
+
+# Lisensi dan Penggunaan
+Source Code, Dokumentasi, dan Video Tutorial dilindungi oleh lisensi yang berbeda. 
+
+## Video Tutorial
+
+Copyright © 2020 Galih Pratama & Angga Risky Setiawan (https://bit.ly/BWASTORE).
+
+All rights reserved. Hak cipta dilindungi undang-undang.
+
+[UU Nomor 28 Tahun 2014 tentang Hak Cipta](https://www.dgip.go.id/images/ki-images/pdf-files/hak_cipta/uu_pp/uu_hc_%2028_2014.pdf)
+
+
+## Source Code & Dokumentasi
+<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text"><a rel="cc:attributionURL" href="https://bit.ly/BWASTORE"><span rel="dct:title">BWAStore Source Code</span></a> by <a rel="cc:attributionURL" href="galihpratama.com"><span rel="cc:attributionName">Galih Pratama</span></a> CC BY-SA 4.0<a href="https://creativecommons.org/licenses/by-sa/4.0"><img style="height:22px!important;margin-left: 3px;vertical-align:text-bottom;" src="https://search.creativecommons.org/static/img/cc_icon.svg" /><img  style="height:22px!important;margin-left: 3px;vertical-align:text-bottom;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /><img  style="height:22px!important;margin-left: 3px;vertical-align:text-bottom;" src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" /></a></p>
+
+<p xmlns:dct="http://purl.org/dc/terms/" xmlns:cc="http://creativecommons.org/ns#" class="license-text"><a rel="cc:attributionURL" href="https://bit.ly/BWASTORE"><span rel="dct:title">BWAStore User Interface Design</span></a> by <a rel="cc:attributionURL" href="galihpratama.com"><span rel="cc:attributionName">Angga Risky</span></a> CC BY-SA 4.0<a href="https://creativecommons.org/licenses/by-sa/4.0"><img style="height:22px!important;margin-left: 3px;vertical-align:text-bottom;" src="https://search.creativecommons.org/static/img/cc_icon.svg" /><img  style="height:22px!important;margin-left: 3px;vertical-align:text-bottom;" src="https://search.creativecommons.org/static/img/cc-by_icon.svg" /><img  style="height:22px!important;margin-left: 3px;vertical-align:text-bottom;" src="https://search.creativecommons.org/static/img/cc-sa_icon.svg" /></a></p>
+
+**Anda diperbolehkan:**
+
+**Berbagi** — menyalin dan menyebarluaskan kembali materi ini dalam bentuk atau format apapun;
+
+**Adaptasi** — menggubah, mengubah, dan membuat turunan dari materi ini
+untuk kepentingan apapun, termasuk kepentingan komersial. 
+Lisensi ini diterima untuk Ciptaan Budaya Bebas.
+Pemberi lisensi tidak dapat mencabut ketentuan di atas sepanjang Anda mematuhi ketentuan lisensi ini.
+
+**Berdasarkan ketentuan berikut:**
+
+**Atribusi** — Anda harus mencantumkan nama yang sesuai, mencantumkan tautan terhadap lisensi, dan menyatakan bahwa telah ada perubahan yang dilakukan. Anda dapat melakukan hal ini dengan cara yang sesuai, namun tidak mengisyaratkan bahwa pemberi lisensi mendukung Anda atau penggunaan Anda.
+
+**BerbagiSerupa** — Apabila Anda menggubah, mengubah, atau membuat turunan dari materi ini, Anda harus menyebarluaskan kontribusi Anda di bawah lisensi yang sama dengan materi asli.
+Tidak ada pembatasan tambahan — Anda tidak dapat menggunakan ketentuan hukum atau sarana kontrol teknologi yang secara hukum membatasi orang lain untuk melakukan hal-hal yang diizinkan lisensi ini.
