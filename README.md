@@ -10,7 +10,19 @@ People with the spirit of learning, lets start! 😉
 
 <hr>
 
+# Source Code
+
+Berkas Source Code pada video tutorial ini dapat kalian akses di GitHub **@belajarkoding** yang dapat kalian akses di
+https://github.com/belajarkoding dengan nama repository store-\*.
+
+Kalian dapat menggunakan dan memakai source code tersebut, dengan mengikuti lisensi MIT (selengkapnya baca bagian Lisensi dibawah). Source code ini **HANYA DAPAT DIGUNAKAN** untuk member kelas BWAStore dan tidak diizinkan untuk disebarkan kepada pihak selain member kelas BWAStore.
+
+Jika anda mendapatkan konten video dan dokumentasi ini dari pihak selain BelajarKoding atau BuildWith Angga, dan bukan dari bagian member BWAStore, anda tidak diperkenankan untuk menggunakan source code ini.
+
+<hr>
+
 # Visual Studio Code
+
 Sebelum kalian memulai membuat aplikasi, salah satu yang harus kalian siapkan adalah Code Editor. Disini saya merekomendasikan **Visual Studio Code** sebagai code editor. Selain gratis, kalian bisa memasang ekstensi yang membuat code editor kalian semakin powerful
 
 Berkas instalasi bisa kalian unduh di https://code.visualstudio.com. Untuk cara install dapat langsung mengikuti aplikasi yang disediakan sesuai dengan sistem operasi yang digunakan
@@ -18,9 +30,11 @@ Berkas instalasi bisa kalian unduh di https://code.visualstudio.com. Untuk cara 
 ![VSCode](/images/vscode.png)
 
 ## Ekstensi
-Untuk membuat pengalaman coding kalian lebih baik,saya rekomendasikan untuk memasang semua plugin dibawah ini. 
+
+Untuk membuat pengalaman coding kalian lebih baik,saya rekomendasikan untuk memasang semua plugin dibawah ini.
 
 ### Ekstensi PHP & Laravel
+
 1. Laravel Blade Snippets
 2. Laravel Blade Spacer
 3. Laravel Model Snippet
@@ -36,6 +50,7 @@ Untuk membuat pengalaman coding kalian lebih baik,saya rekomendasikan untuk mema
 13. DotENV
 
 ### Ekstensi Lainnya
+
 1. Auto Complete Tag
 2. Auto Close Tag
 3. Auto Rename Tag
@@ -52,19 +67,23 @@ Untuk membuat pengalaman coding kalian lebih baik,saya rekomendasikan untuk mema
 14. SonarLint
 15. IntelliSense for CSS class names in HTML
 16. Vetur
- 
+
 ## Tema & Font
+
 ### Tema
+
 1. Absolute Black
 2. Monokai Pro
 
-### Font 
+### Font
+
 1. Operator Mono
 2. JetBrains Mono
 
 <hr>
 
-# Menjalankan Live Server 
+# Menjalankan Live Server
+
 Pada tutorial ini, saya menggunakan ekstensi Live Server dan Live SASS Compiler. Sebelum memulai slicing, pastikan kalian klik **GO Live** dan **Watch SASS** terlebih dahulu, dan pastikan bahwa file SASS kalian ter compile dengan cara mengecek file .css yang ada bersamaan dengan file .scss
 
 ![Live Server](./images/live-server.png)
@@ -74,9 +93,11 @@ Pastikan kalian selalu mengubah file .scss nya dan bukan .css nya, karena file .
 <hr>
 
 # Instalasi Tools Untuk Laravel
+
 Sebelum kamu dapat melanjutkan tahap Laravel, kamu dapat memasang tools di bawah ini sesuai dengan sistem operasi yang kamu gunakan
 
 ## Windows
+
 Untuk sistem operasi Windows, tools yang direkomendasikan untuk membuat aplikasi PHP dan Laravel adalah Laragon. Pada laragon, kamu juga dapat memasang aplikasi tanpa harus melakukan instalasi lewat command line
 
 1. Masuk ke website laragon.org lalu klik Download ![Laragon 1](/images/laragon-1.png)
@@ -88,13 +109,14 @@ Untuk sistem operasi Windows, tools yang direkomendasikan untuk membuat aplikasi
 7. Pilih Quick App -> Laravel ![Laragon 7](/images/laragon-7.png)
 8. Masukkan nama project. Isi nama sesuai keinginan kalian ![Laragon 8](/images/laragon-8.png)
 9. Proses instalasi laravel akan dijalankan oleh laragon. Untuk URL nya akan bisa diakses setelah proses instalasi selesai. ![Laragon 9](/images/laragon-9.png)
-10. Untuk mengakses URLnya, kalian bisa membuka URL sesuai dengan nama project. 
+10. Untuk mengakses URLnya, kalian bisa membuka URL sesuai dengan nama project.
 11. Jika kalian membuat nama projectnya bwastore, maka kalian akses http://bwastore.test ![Laragon 11](/images/laragon-11.png)
 12. Kalian bisa langsung akses situs laravelnya. ![Laragon 12](/images/laragon-12.png)
-13. Kalian pun bisa akses lewat aplikasi laragonnya. 
+13. Kalian pun bisa akses lewat aplikasi laragonnya.
 14. Untuk membuka composer dan terminal, kalian bisa klik tombol Terminal yang ada di dalam aplikasi Laragon
 
 ## macOS
+
 Untuk macOS, saya merekomendasikan untuk memakai Laravel Valet yang proses instalasinya dapat dibuka disini :
 https://laravel.com/docs/6.x/valet
 
@@ -105,6 +127,7 @@ Jika memakai MAMP, untuk composer nya harus dipasang terpisah dengan cara:
 https://gist.github.com/kkirsche/5710272
 
 ## Linux
+
 Untuk Linux, saya merekomendasikan untuk memakai Laravel Valet for Linux yang proses instalasinya dapat dibuka disini :
 https://cpriego.github.io/valet-linux/
 
@@ -126,12 +149,11 @@ Untuk adminer, saya merekomendasikan untuk menggunakan versi dari @pematon di Gi
 
 Proses instalasinya, cukup kalian download zip / clone dan kalian taruh di folder www (jika menggunakan Laragon)
 
-
-
 <hr>
 
 # Lisensi dan Penggunaan
-Source Code, Dokumentasi, dan Video Tutorial dilindungi oleh lisensi yang berbeda. 
+
+Source Code, Dokumentasi, dan Video Tutorial dilindungi oleh lisensi yang berbeda.
 
 ## Video Tutorial
 
@@ -141,8 +163,8 @@ All rights reserved. Hak cipta dilindungi undang-undang.
 
 [UU Nomor 28 Tahun 2014 tentang Hak Cipta](https://www.dgip.go.id/images/ki-images/pdf-files/hak_cipta/uu_pp/uu_hc_%2028_2014.pdf)
 
-
 ## Source Code & Dokumentasi
+
 MIT License
 
 Copyright (c) 2020 Galih Pratama
@@ -164,3 +186,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+<hr>
+
+Source code ini HANYA DAPAT DIGUNAKAN untuk member kelas BWAStore dan tidak diizinkan untuk disebarkan kepada pihak selain member kelas BWAStore.
+
+Jika anda mendapatkan konten video dan dokumentasi ini dari pihak selain BelajarKoding atau BuildWith Angga, dan bukan dari bagian member BWAStore, anda tidak diperkenankan untuk menggunakan source code ini.
