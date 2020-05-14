@@ -151,6 +151,152 @@ Proses instalasinya, cukup kalian download zip / clone dan kalian taruh di folde
 
 <hr>
 
+# Deployment
+
+1. Persiapan
+   1. Buat Akun DigitalOcean
+   2. Masukkan Paypal atau Kartu Kredit / Debit (Bisa pakai Jenius)
+   3. Beli domain baru (kalau gak mau bisa pakai IP tapi tidak disarankan)
+2. Buat Droplet Baru, Cari "LEMP" di Marketplace DigitalOcean
+3. Login ke Server menggunakan SSH via Terminal / Command Line
+   1. Untuk Windows https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse atau bisa pakai PuTTY
+4. Ganti password root
+5. Pasang composer `apt install composer`
+6. Cek composer `composer -v`
+7. Buka link ini sebagai referensi : https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-laravel-with-lemp-on-ubuntu-18-04
+8. Pasang mbstring, xml dan bcmath (kebutuhan laravel dan composer)
+   1. `sudo apt update`
+   2. `sudo apt install php-mbstring php-xml php-bcmath zip php-cli unzip`
+9. Buat database
+   1. `sudo mysql`
+   2. `CREATE DATABASE bwastore;`
+   3. `GRANT ALL ON bwastore.* TO 'bwastore'@'localhost' IDENTIFIED BY 'passwordnya' WITH GRANT OPTION;` Petiknya jangan dicopas langsung tapi diketik ya
+   4. `exit`
+10. Masuk ke database baru
+    1. `mysql -u bwastore -p`
+    2. Masukin passwordnya
+    3. `SHOW DATABASES;`
+11. Setting laravel
+    1. Masuk ke folder `cd /var/www`
+    2. Pull project kalian dari github `git clone URL_GITHUB_KALIAN NAMA_DOMAIN_KALIAN`
+    3. `ls` lalu `cd NAMA_DOMAIN_KALIAN`
+    4. `composer install`
+    5. `nano .env`
+    6. Copas konfigurasi kalian dari local, ganti bagian database
+    7. Ganti bagian `APP_DEBUG=false` dan `APP_ENV=production` biar kalau error ga muncul (mengamankan coding
+    8. `php artisan storage:link`
+12. Setting nginx
+
+    1. `sudo chown -R www-data.www-data /var/www/NAMA_DOMAIN_KALIAN/storage`
+    2. `sudo chown -R www-data.www-data /var/www/NAMA_DOMAIN_KALIAN/bootstrap/cache`
+    3. `sudo nano /etc/nginx/sites-available/NAMA_DOMAIN_KALIAN`
+    4. Copas ini :
+
+    ```NAMA_DOMAIN_KALIAN
+    server {
+        listen 80;
+        server_name NAMA_DOMAIN_KALIAN;
+        root /var/www/NAMA_DOMAIN_KALIAN/public;
+
+        add_header X-Frame-Options "SAMEORIGIN";
+        add_header X-XSS-Protection "1; mode=block";
+        add_header X-Content-Type-Options "nosniff";
+
+        index index.html index.htm index.php;
+
+        charset utf-8;
+
+        location / {
+            try_files $uri $uri/ /index.php?$query_string;
+        }
+
+        location = /favicon.ico { access_log off; log_not_found off; }
+        location = /robots.txt  { access_log off; log_not_found off; }
+
+        error_page 404 /index.php;
+
+        location ~ \.php$ {
+            fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
+            include fastcgi_params;
+        }
+
+        location ~ /\.(?!well-known).* {
+            deny all;
+        }
+    }
+    ```
+
+    5. Ganti bagian server_name jadi `NAMA_DOMAIN_KALIAN`
+    6. Ganti bagian root jadi `/var/www/NAMA_DOMAIN_KALIAN/public;`
+    7. Save filenya
+    8. `sudo ln -s /etc/nginx/sites-available/NAMA_DOMAIN_KALIAN/etc/nginx/sites-enabled/`
+    9. `sudo nginx -t`
+    10. Harus muncul kayak gini:
+
+    ```
+    nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+    nginx: configuration file /etc/nginx/nginx.conf test is successful
+    ```
+
+    11. `sudo systemctl reload nginx`
+
+13. Setting domain kalian
+    1. Masuk ke panel hosting kalian (contoh disini pakai IDCloudHost)
+    2. Masuk manage DNS
+    3. Tambah Add Record
+    4. Namenya isi `NAMA_DOMAIN_KALIAN.` Depannya pakai titik
+    5. Type nya ganti A
+    6. Isi selanjutnya (RDATA / IP Address) masukin nama IP digitalocean kalian (bisa dicek di dashboard DO nya)
+    7. Add Record / Save
+14. Buka website kalian sesuai `NAMA_DOMAIN_KALIAN`
+15. Belum muncul? Sabar tunggu dulu mungkin belum propagasi. Tinggalin minum kopi dulu
+16. Setting Database dan Migration
+    1. `cd /var/www/NAMA_DOMAIN_KALIAN/`
+    2. `php artisan migrate`
+17. Install PHPMyAdmin (opsional)
+
+    1. Referensi dari sini https://linuxize.com/post/how-to-install-phpmyadmin-with-nginx-on-ubuntu-18-04/
+    2. `sudo apt install phpmyadmin`
+    3. Skip dua pilihan, pilih OK (pakai TAB terus ENTER)
+    4. Pilih yes
+    5. Masukin password phpmyadmin
+    6. `sudo mysql`
+    7. `CREATE USER 'padmin'@'localhost' IDENTIFIED BY 'PASSWORD_SQL_PHPMYADMINYA';`
+    8. `GRANT ALL PRIVILEGES ON *.* TO 'padmin'@'localhost' WITH GRANT OPTION;`
+    9. `exit`
+    10. `sudo nano /etc/nginx/snippets/phpmyadmin.conf`
+    11. Copas ini :
+
+    ```phpmyadmin.conf
+    location /phpmyadmin {
+        root /usr/share/;
+        index index.php index.html index.htm;
+        location ~ ^/phpmyadmin/(.+\.php)$ {
+            try_files $uri =404;
+            root /usr/share/;
+            fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+            fastcgi_index index.php;
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            include /etc/nginx/fastcgi_params;
+        }
+
+        location ~* ^/phpmyadmin/(.+\.(jpg|jpeg|gif|css|png|js|ico|html|xml|txt))$ {
+            root /usr/share/;
+        }
+    }
+    ```
+
+    11. `nano /etc/nginx/sites-available/NAMADOMAINKALIAN`
+    12. Masukkan `include snippets/phpmyadmin.conf;` didalam block `server{}`
+    13. `sudo nginx -t`
+    14. `sudo systemctl reload nginx`
+    15. Masuk ke `http://NAMA_DOMAIN_KALIAN/phpmyadmin/`
+    16. Kalau nemu error, jalanin ini : `sudo sed -i "s/|\s*\((count(\$analyzed_sql_results\['select_expr'\]\)/| (\1)/g" /usr/share/phpmyadmin/libraries/sql.lib.php` Petiknya jangan dicopas ketik manual
+
+<hr>
+
 # Lisensi dan Penggunaan
 
 Source Code, Dokumentasi, dan Video Tutorial dilindungi oleh lisensi yang berbeda.
