@@ -11,7 +11,7 @@ People with the spirit of learning, lets start! 😉
 <hr>
 
 # Visual Studio Code
-Sebelum kalian memulai membuat aplikasi Laravel, saya rekomendasikan untuk memasang semua plugin dibawah ini. 
+Sebelum kalian memulai membuat aplikasi, saya rekomendasikan untuk memasang semua plugin dibawah ini. 
 
 ## Ekstensi
 ### Ekstensi PHP & Laravel
