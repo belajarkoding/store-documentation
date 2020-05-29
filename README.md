@@ -19,6 +19,16 @@ Kalian dapat menggunakan dan memakai source code tersebut, dengan mengikuti lise
 
 Jika anda mendapatkan konten video dan dokumentasi ini dari pihak selain BelajarKoding atau BuildWith Angga, dan bukan dari bagian member BWAStore, anda tidak diperkenankan untuk menggunakan source code ini.
 
+# Desain
+
+Berkas Desain pada video tutorial ini dapat kalian akses di Figma di tautana berikut 👍
+
+https://www.figma.com/file/sqVstjTB5j8eWR5c24wEkS/Store
+
+Kalian dapat menggunakan dan memakai desain tersebut, dengan mengikuti lisensi MIT (selengkapnya baca bagian Lisensi dibawah). Desain ini **HANYA DAPAT DIGUNAKAN** untuk member kelas BWAStore dan tidak diizinkan untuk disebarkan kepada pihak selain member kelas BWAStore.
+
+Jika anda mendapatkan konten video dan dokumentasi ini dari pihak selain BelajarKoding atau BuildWith Angga, dan bukan dari bagian member BWAStore, anda tidak diperkenankan untuk menggunakan desain ini.
+
 <hr>
 
 # Visual Studio Code
