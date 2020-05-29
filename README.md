@@ -21,7 +21,7 @@ Jika anda mendapatkan konten video dan dokumentasi ini dari pihak selain Belajar
 
 # Desain
 
-Berkas Desain pada video tutorial ini dapat kalian akses di Figma di tautana berikut 👍
+Berkas Desain pada video tutorial ini dapat kalian akses di Figma di tautan berikut 👍
 
 https://www.figma.com/file/sqVstjTB5j8eWR5c24wEkS/Store
 
