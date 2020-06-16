@@ -161,6 +161,69 @@ Proses instalasinya, cukup kalian download zip / clone dan kalian taruh di folde
 
 <hr>
 
+# Database
+
+## Analisis Database
+
+### Kategori
+
+1. Kategori
+2. Nama Kategori
+3. Slug (bwastore.id/kategori/gadgets)
+
+### Produk
+
+1. Nama Produk
+2. Relasi ke Pemilik Produk
+3. Harga Produk
+4. Deskripsi
+5. Kategori Produk
+
+### Galeri Produk
+
+1. Fotonya
+2. Relasi ke Produk
+
+### Cart
+
+1. Relasi ke Produk
+2. Relasi ke User
+
+### User
+
+1. Nama
+2. Email
+3. Password
+4. Alamat 1
+5. Alamat 2
+6. **Provinsi** [https://github.com/azishapidin/indoregion](https://github.com/azishapidin/indoregion)
+7. **Kota** [https://github.com/azishapidin/indoregion](https://github.com/azishapidin/indoregion)
+8. Kode Pos
+9. Negara
+10. Nomor Handphone
+11. Nama Toko
+12. Kategori Toko
+13. Status Toko
+
+### Transaksi
+
+1. Relasi ke User
+2. Jumlah Asuransi
+3. Ongkir
+4. Total
+5. Status Transaksi (UNPAID/PENDING/SHIPPING/SUCCESS/FAILED)
+6. Nomor Resi
+
+### Transaksi Detail
+
+1. Relasi ke Transaksi
+2. Relasi ke Produknya
+3. Harga Barang
+
+## Entity Relationship Diagram
+
+![ERD](/images/erd.png)
+
 # Deployment
 
 ## Membuat Droplet
